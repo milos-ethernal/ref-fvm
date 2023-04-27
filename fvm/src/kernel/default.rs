@@ -881,9 +881,9 @@ where
         let size = self
             .call_manager
             .engine()
-            .preload(self.call_manager.blockstore(), &[code_id])
-            .context("failed to install actor")
-            .or_illegal_argument()?;
+            .preload(self.call_manager.blockstore(), &[code_id])?;
+            //.context("failed to install actor")
+            //.or_illegal_argument()?;
 
         let t = self
             .call_manager
